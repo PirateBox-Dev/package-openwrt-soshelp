@@ -1,0 +1,30 @@
+This package is part of the PirateBox Project.
+
+It is licenced with GPL-3.
+(c)2015  Matthias Strubel matthias.strubel@aod-rpg.de 
+
+The goal of the package is to enable a sort of "first aid"-kit, 
+that starts when something during the installation or startup did 
+not work like expected.
+
+Start time: 
+
+   - at the beginning of the bootup
+   - it forks a script into background 
+   - and continues the startup.
+
+   - The background script's first step is waiting for 15 minutes.
+   - Based upon a configuration, it checks if some
+   - processes and mount-points are availalbe.
+   - If not, it starts the default dnsmasq & uhttpd service 
+     (if not running)
+
+
+Inside the /www /www/cgi-bin  an additional script file, that
+
+   - Gives a simple information page
+   - runs the commands from the troubleshooting page,
+     which provides the user a quick overview of the system
+     and helps for the first analysis.
+
+
